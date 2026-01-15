@@ -1,0 +1,162 @@
+/* Using Times New Roman for that Executive/Financial look */
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
+    --text-white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.15);
+
+    /* Status Colors */
+    --color-safe: #10b981;
+    /* Green */
+    --color-warn: #f59e0b;
+    /* Orange */
+    --color-danger: #ef4444;
+    /* Red */
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header p {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Glass Effect for Input Area and Cards */
+.glass-panel,
+.sub-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.input-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+/* Button Styling */
+.action-btn {
+    grid-column: span 3;
+    background: white;
+    color: #1e1b4b;
+    /* Dark Blue Text */
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    background-color: #e0e0e0;
+}
+
+/* Grid for the cards */
+.cards-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Card Styling */
+.sub-card {
+    border-top: 5px solid transparent;
+    /* Invisible border by default */
+    position: relative;
+    transition: 0.3s;
+}
+
+.sub-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* The Colors based on Logic */
+.sub-card.green {
+    border-top-color: var(--color-safe);
+}
+
+.sub-card.orange {
+    border-top-color: var(--color-warn);
+}
+
+.sub-card.red {
+    border-top-color: var(--color-danger);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: var(--color-danger);
+}
+
+.big-cost {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}

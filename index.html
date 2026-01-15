@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubBurn | Subscription Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>SUBBURN</h1>
+            <p>"Stop wasting money on unused subscriptions"</p>
+        </header>
+
+        <div class="glass-panel input-area">
+            <input type="text" id="serviceName" placeholder="Service Name (e.g. Netflix)">
+            <input type="number" id="priceInput" placeholder="Monthly Cost (KSh)">
+            <input type="number" id="usageInput" placeholder="Times used per month">
+
+            <button class="action-btn" onclick="addNewSub()">Analyze Spend</button>
+        </div>
+
+        <div id="dashboardGrid" class="cards-layout">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

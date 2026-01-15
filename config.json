@@ -1,0 +1,14 @@
+{
+    "appName": "SubBurn Executive",
+    "region": "Kenya",
+    "currencySymbol": "KSh",
+    "businessLogic": {
+        "description": "Calculates value based on Cost Per Use",
+        "toxicLimit": 250,
+        "moderateLimit": 100
+    },
+    "style": {
+        "theme": "Glassmorphism",
+        "font": "Times New Roman"
+    }
+}
